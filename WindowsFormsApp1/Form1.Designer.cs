@@ -34,8 +34,9 @@ namespace WindowsFormsApp1
             this.btnFecharSW = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnAbrir = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.btnAbrir = new System.Windows.Forms.Button();
+            this.labelSW = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -95,16 +96,6 @@ namespace WindowsFormsApp1
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Arquivo";
             // 
-            // btnAbrir
-            // 
-            this.btnAbrir.Location = new System.Drawing.Point(24, 57);
-            this.btnAbrir.Name = "btnAbrir";
-            this.btnAbrir.Size = new System.Drawing.Size(118, 53);
-            this.btnAbrir.TabIndex = 0;
-            this.btnAbrir.Text = "Abrir Arquivo";
-            this.btnAbrir.UseVisualStyleBackColor = true;
-            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
-            // 
             // btnFechar
             // 
             this.btnFechar.Location = new System.Drawing.Point(24, 116);
@@ -115,11 +106,31 @@ namespace WindowsFormsApp1
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
+            // btnAbrir
+            // 
+            this.btnAbrir.Location = new System.Drawing.Point(24, 57);
+            this.btnAbrir.Name = "btnAbrir";
+            this.btnAbrir.Size = new System.Drawing.Size(118, 53);
+            this.btnAbrir.TabIndex = 0;
+            this.btnAbrir.Text = "Abrir Arquivo";
+            this.btnAbrir.UseVisualStyleBackColor = true;
+            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
+            // 
+            // labelSW
+            // 
+            this.labelSW.AutoSize = true;
+            this.labelSW.Location = new System.Drawing.Point(9, 424);
+            this.labelSW.Name = "labelSW";
+            this.labelSW.Size = new System.Drawing.Size(53, 17);
+            this.labelSW.TabIndex = 5;
+            this.labelSW.Text = "Pronto!";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(337, 450);
+            this.Controls.Add(this.labelSW);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -129,6 +140,7 @@ namespace WindowsFormsApp1
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -141,6 +153,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnAbrir;
         private System.Windows.Forms.Button btnFechar;
+        private System.Windows.Forms.Label labelSW;
     }
 }
 
