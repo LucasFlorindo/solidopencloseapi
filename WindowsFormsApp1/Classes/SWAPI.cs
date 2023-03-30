@@ -166,6 +166,35 @@ namespace WindowsFormsApp1.Classes
         //exports an archive to DWG
 
 
+        public void ExportarParaDWG(string CaminhoOrigem, string PathDestino)
+        {
+            try
+            {
+                if (VerificaSheetMetal())
+                {
+                    //Here we define whats gonna be exported to dwg.
+
+                    int Opcoes = (int)ExportarDWG_opt.Exp_Geometry + (int)ExportarDWG_opt.Exp_LibFiles + (int)ExportarDWG_opt.Exp_BendLines;
+
+                    bool resultado = swPart.ExportToDWG2(PathDestino, CaminhoOrigem, (int)swExportToDWG_e.swExportToDWG_ExportSheetMetal, true, null, false, false, Opcoes, null);
+
+                    if (!resultado)
+                    {
+                        throw new Exception($"Erro em {nameof(ExportarParaDWG)}: Não foi Possível converter para DWG.");
+
+                    }
+                    else
+                    {
+                        throw new Exception($"Erro em {nameof(ExportarParaDWG)}: Este arquivo não é uma chapa metálica.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Erro e, {nameof(ExportarParaDWG)}: Não foi possível converter o arquivo para DWG.");
+            }
+        }
+
 
     }
 }
